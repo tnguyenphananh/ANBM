@@ -9,7 +9,9 @@ export default function Home(){
         <>
             <div className="homeContainer">
             <NavBar />
-            
+            <Leftsidebar />
+            <Feed />
+            <Rightsidebar />
             </div>
         </>
     );
