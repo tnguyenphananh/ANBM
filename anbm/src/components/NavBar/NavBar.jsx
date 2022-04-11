@@ -8,7 +8,7 @@ export default function NavBar(){
           </div>
           <div className="NavBarCenter">
               <div className="searchbar">
-                  <Search />
+                  <Search className="searchIcon" />
                   <input placeholder="Search for friends, songs, or artists" className="searchInput" /> 
               </div>
           </div>
