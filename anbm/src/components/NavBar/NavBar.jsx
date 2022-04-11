@@ -31,7 +31,7 @@ export default function NavBar(){
                 <span className="NavBarIconBadge">1</span>
                 </div>        
             </div>
-            <img src="/assets/person/1.jpeg" alt="" className="NavBarImg" />
+            <img src="/assets/profile/photo1.jpg" alt="" className="NavBarImg" />
          </div>
      </div>  
     )
