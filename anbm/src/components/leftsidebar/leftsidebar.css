@@ -12,3 +12,13 @@
     margin: 0;
     list-style: none;
 }
+
+.leftsidebarListItem{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.leftsidebarIcon{
+    margin-right: 15px;
+}
