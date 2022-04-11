@@ -7,9 +7,11 @@ import "./home.css"
 export default function Home(){
     return (
         <>
-            <div className="homeContainer">
             <NavBar />
-            
+            <div className="homeContainer">
+                <Leftsidebar />
+                <Feed />
+                <Rightsidebar />
             </div>
         </>
     );

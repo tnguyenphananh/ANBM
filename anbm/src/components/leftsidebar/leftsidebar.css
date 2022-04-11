@@ -1,9 +1,24 @@
 .leftsidebar{
-    flex: 3;
+    flex: 1.5;
     height: calc(100vh - 50px);
 }
 
 .leftsidebarWrapper{
     padding: 20px;
-    background-color: yellowgreen;
+}
+
+.leftsidebarList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.leftsidebarListItem{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.leftsidebarIcon{
+    margin-right: 15px;
 }
