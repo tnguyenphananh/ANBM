@@ -1,7 +1,7 @@
 .NavBarContainer{
     height: 70px;
     width: 100%;
-    background-color: #a79d9d;
+    background-color: #332d289a;
     display:flex;
     align-items: center;
     position: sticky;
@@ -16,7 +16,7 @@
 
 .logo{
     font-size: 40px;
-    margin-left: 20px;
+    margin-left: 30px;
     font-weight: bold;
     color: rgb(0, 0, 0);
     cursor: pointer;
@@ -28,7 +28,7 @@
 .searchbar{
     width: 100%;
     height: 30px;
-    background-color: antiquewhite;
+    background-color: rgb(253, 253, 253);
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -42,7 +42,7 @@
 .searchInput{
     border: none;
     width: 70%;
-    background-color: antiquewhite;
+    background-color: rgb(250, 248, 246);
 
 }
 .searchInput:focus{
@@ -58,15 +58,21 @@
     font-weight: bold; 
 }
 .NavBarLink{
-    margin-right: 10px;
+    margin-right: 20px;
     font-size: 14px;
     cursor: pointer;
+}
+.NavBarLink1{
+    margin-right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color: rgba(255, 115, 0, 0.89);
 }
 .NavBarIcons{
     display: flex;
 }
 .NavBarIconItems{
-margin-right: 15px;
+margin-right: 20px;
 cursor: pointer;
 position: relative;
 }
@@ -75,7 +81,7 @@ position: relative;
     width: 20px;
     background-color: red;
     border-radius: 50%;
-    color:antiquewhite;
+    color:rgb(250, 250, 250);
     position: absolute;
     top: -7px;
     right: -7px;
