@@ -20,15 +20,15 @@ export default function NavBar(){
             <div className="NavBarIcons">
             <div className="NavBarIconItems">
                 <Person />
-                <span className="NavBarIconBadge">1</span>
+                <span className="NavBarIconBadge">1.2k</span>
                 </div>    
                 <div className="NavBarIconItems">
                 <Chat />
-                <span className="NavBarIconBadge">2</span>
+                <span className="NavBarIconBadge">657</span>
                 </div>    
                 <div className="NavBarIconItems">
                 <Notifications />
-                <span className="NavBarIconBadge">1</span>
+                <span className="NavBarIconBadge">1.0k</span>
                 </div>        
             </div>
             <img src="/assets/profile/photo1.jpg" alt="" className="NavBarImg" />
