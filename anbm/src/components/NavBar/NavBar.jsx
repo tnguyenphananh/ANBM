@@ -8,30 +8,30 @@ export default function NavBar(){
           </div>
           <div className="NavBarCenter">
               <div className="searchbar">
-                  <Search />
+                  <Search className="searchIcon" />
                   <input placeholder="Search for friends, songs, or artists" className="searchInput" /> 
               </div>
           </div>
           <div className="NavBarRight">
             <div className="NavBarLinks">
-            <span className="NavBarLink">Homepage</span>
+            <span className="NavBarLink1">Upload</span>
             <span className="NavBarLink">Timeline</span>
             </div>
             <div className="NavBarIcons">
             <div className="NavBarIconItems">
                 <Person />
-                <span className="NavBarIconBadge">1</span>
+                <span className="NavBarIconBadge">1.2k</span>
                 </div>    
                 <div className="NavBarIconItems">
                 <Chat />
-                <span className="NavBarIconBadge">2</span>
+                <span className="NavBarIconBadge">657</span>
                 </div>    
                 <div className="NavBarIconItems">
                 <Notifications />
-                <span className="NavBarIconBadge">1</span>
+                <span className="NavBarIconBadge">1.0k</span>
                 </div>        
             </div>
-            <img src="/assets/person/1.jpeg" alt="" className="NavBarImg" />
+            <img src="/assets/profile/photo1.jpg" alt="" className="NavBarImg" />
          </div>
      </div>  
     )
