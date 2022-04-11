@@ -1,7 +1,7 @@
 .NavBarContainer{
     height: 70px;
     width: 100%;
-    background-color: #09070c;
+    background-color: #a79d9d;
     display:flex;
     align-items: center;
     position: sticky;
@@ -15,10 +15,10 @@
 }
 
 .logo{
-    font-size: 24px;
+    font-size: 40px;
     margin-left: 20px;
     font-weight: bold;
-    color: antiquewhite;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 .NavBarCenter{
@@ -42,6 +42,7 @@
 .searchInput{
     border: none;
     width: 70%;
+    background-color: antiquewhite;
 
 }
 .searchInput:focus{
@@ -49,11 +50,12 @@
 
 }
 .NavBarRight{
-    flex:4 ;
+    flex:3 ;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    color: antiquewhite;   
+    color: rgb(0, 0, 0);  
+    font-weight: bold; 
 }
 .NavBarLink{
     margin-right: 10px;
