@@ -3,9 +3,9 @@
     height: 170%;
     border-radius: 10px;
     /*background-color: green;*/
-    box-shadow: 62px -54px 76px 14px rgba(0,0,0,0.68);
-    -webkit-box-shadow: 62px -54px 76px 14px rgba(0,0,0,0.68);
-    -moz-box-shadow: 62px -54px 76px 14px rgba(0,0,0,0.68);
+    box-shadow: 13px -12px 14px -10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 13px -12px 14px -10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 13px -12px 14px -10px rgba(0,0,0,0.5);
 }
 
 .shareWrapper{
