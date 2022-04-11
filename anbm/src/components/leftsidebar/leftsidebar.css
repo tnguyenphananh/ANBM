@@ -5,5 +5,10 @@
 
 .leftsidebarWrapper{
     padding: 20px;
-    background-color: yellowgreen;
+}
+
+.leftsidebarList{
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
