@@ -4,7 +4,7 @@ export default function NavBar(){
     return (
       <div className="NavBarContainer"> 
           <div className="NavBarLeft">
-             <span className="logo">ANBM</span>
+             <span className="logo">BANd</span>
           </div>
           <div className="NavBarCenter">
               <div className="searchbar">
