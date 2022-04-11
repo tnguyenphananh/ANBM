@@ -57,9 +57,21 @@ export default function Post() {
                 <span className="postText">Hey! It's my first post</span>
                 <div className="postCenterBottom">
                     <hr className="postCenterBottomHr" />
-                    <button className="playButton">Play</button>
+                    <div className="play">
+                        <button className="playButton">Play</button>
+                    </div>
                     <span className="songLink">https://thelink.com</span>
-                    <img className="postImg" src="/assets/post/Women20Holding20iPhone20620Mockup2028129.jpg" alt="" />
+                    <div className="albumCover">
+                        <img className="albumImg" src="/assets/post/Women20Holding20iPhone20620Mockup2028129.jpg" alt="" />
+                        <div className="albumBottom">
+                            <ThumbUp style={{fontSize: 50}}/>
+                            <ThumbDown style={{fontSize: 50}}/>
+                            <Comment style={{fontSize: 50}}/>
+                            <Save style={{fontSize: 50}}/>
+                            <Share style={{fontSize: 50}}/>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             <div className="postBottom">
@@ -70,16 +82,6 @@ export default function Post() {
                 </div>
                 <div className="postBottomRight">
                     <span className="postCommentText">9 comments</span>
-                </div>
-            </div>
-            <div className="postRight">
-                <img src="/public/logo192.png" alt="" className="albumPic" />
-                <div className="postRightBottom">
-                    <ThumbUp/>
-                    <ThumbDown/>
-                    <Comment/>
-                    <Save/>
-                    <Share/>
                 </div>
             </div>
         </div>
