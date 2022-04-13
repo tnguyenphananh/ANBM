@@ -6,12 +6,13 @@ import {TrendingUp} from "@material-ui/icons";
 import {Whatshot} from "@material-ui/icons";
 import { Users } from "../../dummyData";
 import Suggest from "../suggest/Suggest";
+import Profile from "../../pages/profile/profile";
 
-export default function Rightsidebar() {
-    return (
-        <div className="rightsidebar">
-            <div className="rightsidebarWrapper">
-                <ul className="rightsidebarList">
+export default function Rightsidebar({profile}) {
+    const HomeRightbar = () => {
+        return(
+            <>
+            <ul className="rightsidebarList">
                     <li className="rightsidebarListItem">
                         <FeaturedPlayList className="rightsidebarIcon"/>
                         <span className="rightsidebarListItemText">Suggested Columns</span>
@@ -40,6 +41,72 @@ export default function Rightsidebar() {
                         <Suggest key={u.id} user={u}/>
                     ))}
                 </ul>
+            </>
+        );
+    };
+
+    const ProfileRightbar = () =>{
+        return (
+        <>
+        <h4 className="rightsidebarTitle">Bio</h4>
+        <div className="rightsidebarInfo">
+        <div className="rightsidebarInfoItem">
+                <span className="rightsidebarInfoKey">Pronouns:</span>
+                <span className="rightsidebarInfoValue"> He/Him</span>
+            </div>
+            <div className="rightsidebarInfoItem">
+                <span className="rightsidebarInfoKey">Location:</span>
+                <span className="rightsidebarInfoValue">Chicago</span>
+            </div>
+            <div className="rightsidebarInfoItem">
+                <span className="rightsidebarInfoKey">Age:</span>
+                <span className="rightsidebarInfoValue"> 21</span>
+            </div>
+            <div className="rightsidebarInfoItem">
+                <span className="rightsidebarInfoKey">Genre:</span>
+                <span className="rightsidebarInfoValue"> Hip-Hop</span>
+            </div>
+            <div className="rightsidebarInfoItem">
+                <span className="rightsidebarInfoKey">Instruments:</span>
+                <span className="rightsidebarInfoValue"> Guitar</span>
+            </div>
+        </div>
+        <h4 className="rightsidebarTitle">Top Songs</h4>
+        <div className="rightsidebarFollowings">
+            <div className="rightsidebarFollowing">
+                <img src="assets/profile/photo1.jpg" alt="" className="rightsidebarFollowingImg" />
+                <span className="rightsidebarFollowingName">John Cena</span>
+            </div>
+            <div className="rightsidebarFollowing">
+                <img src="assets/profile/photo2.jpg" alt="" className="rightsidebarFollowingImg" />
+                <span className="rightsidebarFollowingName">John Cena</span>
+            </div>
+            <div className="rightsidebarFollowing">
+                <img src="assets/profile/photo3.jpg" alt="" className="rightsidebarFollowingImg" />
+                <span className="rightsidebarFollowingName">John Cena</span>
+            </div>
+            <div className="rightsidebarFollowing">
+                <img src="assets/profile/photo1.jpg" alt="" className="rightsidebarFollowingImg" />
+                <span className="rightsidebarFollowingName">John Cena</span>
+            </div>
+            <div className="rightsidebarFollowing">
+                <img src="assets/profile/photo2.jpg" alt="" className="rightsidebarFollowingImg" />
+                <span className="rightsidebarFollowingName">John Cena</span>
+            </div>
+            <div className="rightsidebarFollowing">
+                <img src="assets/profile/photo3.jpg" alt="" className="rightsidebarFollowingImg" />
+                <span className="rightsidebarFollowingName">John Cena</span>
+            </div>
+        </div>
+        </>
+
+        )
+    }
+    return (
+        <div className="rightsidebar">
+            <div className="rightsidebarWrapper">
+              <ProfileRightbar/>  
+
             </div>
         </div>
     );

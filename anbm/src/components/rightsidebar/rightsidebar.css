@@ -1,5 +1,5 @@
 .rightsidebar{
-    flex: 1.5;
+    flex: 2;
     height: calc(100vh - 50px);
     overflow-y: scroll;
     position: sticky;
@@ -57,3 +57,60 @@
     list-style: none;
 }
 
+.rightsidebarFriend{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rightsidebarFriendImg{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.rightsidebarTitle{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.rightsidebarInfo{
+    margin-bottom: 50px;
+}
+
+.rightsidebarInfoItem{
+    margin-bottom: 10px ;
+}
+
+.rightsidebarInfoKey{
+    font-weight: 500;
+    margin-right: 10px;
+    color: #555;
+
+}
+
+.rightsidebarInfoValue{
+    font-weight: 300;
+}
+
+.rightsidebarFollowings{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rightsidebarFollowing{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.rightsidebarFollowingImg{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
