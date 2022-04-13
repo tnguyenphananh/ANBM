@@ -1,5 +1,5 @@
 import "./leftsidebar.css"
-import {Favorite} from "@material-ui/icons";
+import {Save} from "@material-ui/icons";
 import {Home} from "@material-ui/icons";
 import {ViewColumn} from "@material-ui/icons";
 
@@ -15,7 +15,7 @@ export default function Leftsidebar() {
                     <span className="leftsidebarListItemText">Home</span>
                   </li>
                     <li className="leftsidebarListItem">
-                        <Favorite className="leftsidebarIcon"/>
+                        <Save className="leftsidebarIcon"/>
                     <span className="leftsidebarListItemText">Saved Posts</span>
                   </li>
                   <li className="leftsidebarListItem">
