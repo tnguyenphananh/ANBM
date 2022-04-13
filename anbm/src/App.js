@@ -3,7 +3,7 @@ import Login from "./pages/home/login/Login";
 import Register from "./pages/home/register/Register";
 
 function App() {
-  return <Login/>
+  return <Home/>
 }
 
 export default App;
