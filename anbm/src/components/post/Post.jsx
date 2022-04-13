@@ -1,10 +1,21 @@
 import"./post.css"
 import{MoreVert,ThumbDown,ThumbUp,Comment,Save,Share} from "@material-ui/icons"
 import { Users } from "../../dummyData";
+import { useState } from "react";
 
 export default function Post({post}) {
-    const user=Users.filter(u=>u.id===1)
-    console.log(user[0].username)
+    const [like,setLike] = useState(post.like)
+    const [isLiked,setIsLiked] = useState(false)
+    const likeHandler=()=>{
+        setLike(isLiked? like-1:like+1)
+        setIsLiked(!isLiked)
+    }
+    const [dislike,setDislike] = useState(post.dislike)
+    const [isDisliked,setIsDisliked] = useState(false)
+    const dislikeHandler=()=>{
+        setDislike(isDisliked? dislike-1:dislike+1)
+        setIsDisliked(!isDisliked)
+    }
     return (
       <div className="post">
           <div className="postWrapper">
@@ -41,14 +52,14 @@ export default function Post({post}) {
                     </div>
                     <div className="postRightBottom">
                         <div className="interactButton">
-                            <ThumbUp style={{fontSize: 50}}/>
+                            <ThumbUp style={{fontSize: 50}} onClick={likeHandler}/>
                             <span className="interactButtonText">Like</span>
-                            <span className="postLikeCounter">{post.like}</span>
+                            <span className="postLikeCounter">{like}</span>
                         </div>
                         <div className="interactButton">
-                            <ThumbDown style={{fontSize: 50}}/>
+                            <ThumbDown style={{fontSize: 50}} onClick={dislikeHandler}/>
                             <span className="interactButtonText">Dislike</span>
-                            <span className="postDislikeCounter">{post.dislike}</span>
+                            <span className="postDislikeCounter">{dislike}</span>
                         </div>
                         <div className="interactButton">
                             <Comment style={{fontSize: 50}}/>
