@@ -1,6 +1,9 @@
 .leftsidebar{
     flex: 1.5;
     height: calc(100vh - 50px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 75px;
 }
 
 .leftsidebarWrapper{
