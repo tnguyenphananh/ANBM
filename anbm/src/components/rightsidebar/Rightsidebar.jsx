@@ -4,7 +4,7 @@ import {Face} from "@material-ui/icons";
 import {MusicNote} from "@material-ui/icons";
 import {TrendingUp} from "@material-ui/icons";
 import {Whatshot} from "@material-ui/icons";
-
+import { Users } from "../../dummyData";
 
 export default function Rightsidebar() {
     return (
@@ -39,54 +39,7 @@ export default function Rightsidebar() {
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
                         <span className="rightsidebarFriendName"> Jane Doe</span>
                     </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
-                    <li className="rightsidebarFriend">
-                        <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
-                    </li>
+                    
                 </ul>
 
             </div>

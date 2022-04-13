@@ -1,23 +1,32 @@
 import"./post.css"
 import{MoreVert,ThumbDown,ThumbUp,Comment,Save,Share} from "@material-ui/icons"
+import { Users } from "../../dummyData";
 
-export default function Post() {
+export default function Post({post}) {
+    const user=Users.filter(u=>u.id===1)
+    console.log(user[0].username)
     return (
       <div className="post">
           <div className="postWrapper">
                 <div className="postLeft">
                     <div className="postLeftTop">
                         <div className="postLeftTopLeft">
-                            <img className="postProfileImg" src="/assets/profile/template_3.jpg" alt="" />
-                            <span className="postUsername"> Safak Kocaolu </span>
-                            <span className="postDate"> 5mins ago</span>
+                            <img 
+                                className="postProfileImg" 
+                                src={Users.filter(u=>u.id===post.userId)[0].profilePicture} 
+                                alt="" 
+                            />
+                            <span className="postUsername">
+                                {Users.filter(u=>u.id===post.userId)[0].username}
+                            </span>
+                            <span className="postDate"> {post.date}</span>
                         </div>
                         <div className="postLeftTopRight">
                             <MoreVert/>
                         </div>
                     </div>
                     <div className="postLeftCenter">
-                        <span className="postText">Hey! It's my first post</span>
+                        <span className="postText">{post?.desc}</span>
                     </div>
                     <div className="postLeftBottom">
                         <div className="play">
@@ -28,20 +37,23 @@ export default function Post() {
                 </div>
                 <div className="postRight">
                     <div className="postRightTop">
-                        <img className="albumImg" src="/assets/post/Women20Holding20iPhone20620Mockup2028129.jpg" alt="" />
+                        <img className="albumImg" src={post.photo} alt="" />
                     </div>
                     <div className="postRightBottom">
                         <div className="interactButton">
                             <ThumbUp style={{fontSize: 50}}/>
                             <span className="interactButtonText">Like</span>
+                            <span className="postLikeCounter">{post.like}</span>
                         </div>
                         <div className="interactButton">
                             <ThumbDown style={{fontSize: 50}}/>
                             <span className="interactButtonText">Dislike</span>
+                            <span className="postDislikeCounter">{post.dislike}</span>
                         </div>
                         <div className="interactButton">
                             <Comment style={{fontSize: 50}}/>
                             <span className="interactButtonText">Comment</span>
+                            <span className="postCommentCounter">{post.comment}</span>
                         </div>
                         <div className="interactButton">
                             <Save style={{fontSize: 50}}/>
