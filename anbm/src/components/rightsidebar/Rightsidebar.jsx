@@ -37,55 +37,55 @@ export default function Rightsidebar() {
                 <ul className="rightsidebarFriendList">
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Brendan Wise</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> An Trieu</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Neerav Sharma Nepali</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Harry Phillips</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Patrick Mattar</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Flynn Hersh</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> George Gilligan</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Daniel Bien</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Oscar Sanchez</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Eddie Brees</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Jake Ripple</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Matt Shover</span>
                     </li>
                     <li className="rightsidebarFriend">
                         <img className="rightsidebarFriendImg" src="/assets/profile/template_3.jpg" alt=""/>
-                        <span className="rightsidebarFriendName"> Jane Doe</span>
+                        <span className="rightsidebarFriendName"> Justin Vega</span>
                     </li>
                 </ul>
 
