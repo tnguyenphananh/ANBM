@@ -10,13 +10,31 @@ export default function Profile() {
             <NavBar />
             <div className="profile">
                 <Leftsidebar />
+                
                 <div className="profileRight"></div>
                 <div className="profileRightTop">
-                    <img src="assets/post/3" alt="" />
-                </div>
-                <div className="profileRightBottom"></div>
+                    <div className="profileCover">
+                        <img 
+                        className="profileCoverImg"
+                         src="assets/post/post3.jpg" 
+                         alt="" />
+                    <img 
+                    className="profileUserImg" 
+                    src="assets/profile/photo2.jpg" 
+                    alt="" 
+                    />
+                    </div>
+                    <div className="profileInfo">
+                        <h4 className= "profileInfoName"> Safak Kocaoglu</h4>  
+                        <span className="profileInfoDesc" >Hello my friends</span>  
+                    </div>
+                    <div className="profileRightBottom">
                 <Feed />
-                <Rightsidebar />
+                <Rightsidebar profile/>
+                </div>
+                
+                </div>
+                
             </div>
         </>
     )
