@@ -16,7 +16,7 @@ export default function Profile() {
                     <div className="profileCover">
                         <img 
                         className="profileCoverImg"
-                         src="assets/post/post3.jpg" 
+                         src="logo512.png" 
                          alt="" />
                     <img 
                     className="profileUserImg" 
@@ -25,8 +25,8 @@ export default function Profile() {
                     />
                     </div>
                     <div className="profileInfo">
-                        <h4 className= "profileInfoName"> Safak Kocaoglu</h4>  
-                        <span className="profileInfoDesc" >Hello my friends</span>  
+                        <h4 className= "profileInfoName"> Craezy Bouy</h4>  
+                        <span className="profileInfoDesc" >Just a DJ </span>  
                     </div>
                     <div className="profileRightBottom">
                 <Feed />

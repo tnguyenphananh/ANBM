@@ -49,22 +49,30 @@ export default function Rightsidebar({profile}) {
     const ProfileRightbar = () =>{
         return (
         <>
-        <h4 className="rightsidebarTitle">User Information</h4>
+        <h4 className="rightsidebarTitle">Bio</h4>
         <div className="rightsidebarInfo">
-            <div className="rightsidebarInfoItem">
-                <span className="rightsidebarInfoKey">City:</span>
-                <span className="rightsidebarInfoValue"> Chicago</span>
+        <div className="rightsidebarInfoItem">
+                <span className="rightsidebarInfoKey">Pronouns:</span>
+                <span className="rightsidebarInfoValue"> He/Him</span>
             </div>
             <div className="rightsidebarInfoItem">
-                <span className="rightsidebarInfoKey">From:</span>
-                <span className="rightsidebarInfoValue"> Madrid</span>
+                <span className="rightsidebarInfoKey">Location:</span>
+                <span className="rightsidebarInfoValue">Chicago</span>
+            </div>
+            <div className="rightsidebarInfoItem">
+                <span className="rightsidebarInfoKey">Age:</span>
+                <span className="rightsidebarInfoValue"> 21</span>
             </div>
             <div className="rightsidebarInfoItem">
                 <span className="rightsidebarInfoKey">Genre:</span>
                 <span className="rightsidebarInfoValue"> Hip-Hop</span>
             </div>
+            <div className="rightsidebarInfoItem">
+                <span className="rightsidebarInfoKey">Instruments:</span>
+                <span className="rightsidebarInfoValue"> Guitar</span>
+            </div>
         </div>
-        <h4 className="rightsidebarTitle">User Friends</h4>
+        <h4 className="rightsidebarTitle">Top Songs</h4>
         <div className="rightsidebarFollowings">
             <div className="rightsidebarFollowing">
                 <img src="assets/profile/photo1.jpg" alt="" className="rightsidebarFollowingImg" />
