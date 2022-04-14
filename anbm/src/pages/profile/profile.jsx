@@ -20,13 +20,13 @@ export default function Profile() {
                          alt="" />
                     <img 
                     className="profileUserImg" 
-                    src="assets/profile/photo2.jpg" 
+                    src="assets/profile/template_3.jpg" 
                     alt="" 
                     />
                     </div>
                     <div className="profileInfo">
-                        <h4 className= "profileInfoName"> Craezy Bouy</h4>  
-                        <span className="profileInfoDesc" >Just a DJ </span>  
+                        <h4 className= "profileInfoName"> Emily Martinez</h4>  
+                        <span className="profileInfoDesc" > I have a need to please </span>  
                     </div>
                     <div className="profileRightBottom">
                 <Feed />

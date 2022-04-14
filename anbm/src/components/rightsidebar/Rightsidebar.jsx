@@ -52,30 +52,30 @@ export default function Rightsidebar({profile}) {
         <div className="rightsidebarInfo">
         <div className="rightsidebarInfoItem">
                 <span className="rightsidebarInfoKey">Pronouns:</span>
-                <span className="rightsidebarInfoValue"> He/Him</span>
+                <span className="rightsidebarInfoValue"> She/Her</span>
             </div>
             <div className="rightsidebarInfoItem">
                 <span className="rightsidebarInfoKey">Location:</span>
-                <span className="rightsidebarInfoValue">Chicago</span>
+                <span className="rightsidebarInfoValue"> Rock, Colorado</span>
             </div>
             <div className="rightsidebarInfoItem">
                 <span className="rightsidebarInfoKey">Age:</span>
-                <span className="rightsidebarInfoValue"> 21</span>
+                <span className="rightsidebarInfoValue"> 19</span>
             </div>
             <div className="rightsidebarInfoItem">
                 <span className="rightsidebarInfoKey">Genre:</span>
-                <span className="rightsidebarInfoValue"> Hip-Hop</span>
+                <span className="rightsidebarInfoValue"> Indie-Pop</span>
             </div>
             <div className="rightsidebarInfoItem">
                 <span className="rightsidebarInfoKey">Instruments:</span>
-                <span className="rightsidebarInfoValue"> Guitar</span>
+                <span className="rightsidebarInfoValue"> Pan Flute</span>
             </div>
         </div>
         <h4 className="rightsidebarTitle">Top Songs</h4>
         <div className="rightsidebarFollowings">
             <div className="rightsidebarFollowing">
                 <img src="assets/profile/photo1.jpg" alt="" className="rightsidebarFollowingImg" />
-                <span className="rightsidebarFollowingName">John Cena</span>
+                <span className="rightsidebarFollowingName"> Tipitipitiu</span>
             </div>
             <div className="rightsidebarFollowing">
                 <img src="assets/profile/photo2.jpg" alt="" className="rightsidebarFollowingImg" />
