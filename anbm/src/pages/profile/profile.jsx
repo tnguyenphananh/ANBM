@@ -16,7 +16,7 @@ export default function Profile() {
                     <div className="profileCover">
                         <img 
                         className="profileCoverImg"
-                         src="logo512.png" 
+                         src="assets/post/post1.jpg" 
                          alt="" />
                     <img 
                     className="profileUserImg" 

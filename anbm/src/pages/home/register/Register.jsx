@@ -5,9 +5,9 @@ export default function Register(){
     <div className="login">
         <div className="loginWrapper">
             <div className="loginLeft">
-                <h3 className="loginLogo">ANBM</h3>
+                <h3 className="loginLogo">BANd</h3>
                 <span className="loginDesc">
-                    Connect with friends and the world around you on ANBM.
+                Banding together through music.
                 </span>
             </div>
             <div className="loginRight">
