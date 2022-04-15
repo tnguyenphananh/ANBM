@@ -105,7 +105,7 @@ export default function Rightsidebar({profile}) {
     return (
         <div className="rightsidebar">
             <div className="rightsidebarWrapper">
-              <Rightsidebar/>  
+              <ProfileRightbar/>  
 
             </div>
         </div>
