@@ -21,6 +21,7 @@
     color: rgb(0, 0, 0);
     cursor: pointer;
 }
+
 .NavBarCenter{
     flex:5 ;
     
@@ -106,3 +107,4 @@ position: relative;
     cursor: pointer;
 
 }
+
