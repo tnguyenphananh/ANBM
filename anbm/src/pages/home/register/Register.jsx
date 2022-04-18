@@ -1,11 +1,14 @@
 import "./register.css";
+import {Link} from "react-router-dom";
 
 export default function Register(){
     return (
     <div className="login">
         <div className="loginWrapper">
             <div className="loginLeft">
+            <Link to ="/" style={{textDecoration: "none"}}>
                 <h3 className="loginLogo">BANd</h3>
+                </Link>
                 <span className="loginDesc">
                 Banding together through music.
                 </span>

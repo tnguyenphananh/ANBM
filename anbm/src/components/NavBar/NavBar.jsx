@@ -1,11 +1,14 @@
 import "./NavBar.css" ;
-import {Search, Person, Chat, Notifications } from "@material-ui/icons" ;
+import {Search, Person, Chat, Notifications, PlayCircleFilledWhiteTwoTone } from "@material-ui/icons" ;
+import {Link} from "react-router-dom";
 
 export default function NavBar(){
     return (
       <div className="NavBarContainer"> 
           <div className="NavBarLeft">
+              <Link to ="/" style={{textDecoration: "none"}}>
              <span className="logo">BANd</span>
+             </Link>
           </div>
           <div className="NavBarCenter">
               <div className="searchbar">
@@ -16,8 +19,12 @@ export default function NavBar(){
           <div className="NavBarRight">
             <div className="NavBarLinks">
             <span className="NavBarLink1">Upload</span>
+            <Link to ='/login' style={{textDecoration: "none"}}>
             <span className="NavBarLink"> Login</span>
-            <span className="NavBarLink2"> Register</span>
+            </Link>
+            <Link to ='/register' style={{textDecoration: "none"}}>
+            <span className="NavBarLink3"> Register</span>
+            </Link>
             </div>
             <div className="NavBarIcons">
             <div className="NavBarIconItems">
@@ -33,8 +40,10 @@ export default function NavBar(){
                 <span className="NavBarIconBadge">1.0k</span>
                 </div>        
             </div>
+            <Link to ='/profile' style={{textDecoration: "none"}}>
             <img src="/assets/profile/photo1.jpg" alt="" className="NavBarImg" />
-         </div>
+            </Link>
+        </div>
      </div>  
     )
 }

@@ -3,26 +3,24 @@ import {Save} from "@material-ui/icons";
 import {Home} from "@material-ui/icons";
 import {ViewColumn} from "@material-ui/icons";
 
-
-
 export default function Leftsidebar() {
     return (
         <div className="leftsidebar">
             <div className="leftsidebarWrapper">
-                <ul className="leftsidebarList">
-                <li className="leftsidebarListItem">
+                <div className="leftsidebarList">
+                <div className="leftsidebarListItem">
                         <Home className="leftsidebarIcon"/>
                     <span className="leftsidebarListItemText">Home</span>
-                  </li>
-                    <li className="leftsidebarListItem">
+                  </div>
+                    <div className="leftsidebarListItem">
                         <Save className="leftsidebarIcon"/>
                     <span className="leftsidebarListItemText">Saved Posts</span>
-                  </li>
-                  <li className="leftsidebarListItem">
+                  </div>
+                  <div className="leftsidebarListItem">
                         <ViewColumn className="leftsidebarIcon"/>
                     <span className="leftsidebarListItemText">Genre Columns</span>
-                  </li>
-                </ul>
+                  </div>
+                </div>
             </div>
         </div>
     )

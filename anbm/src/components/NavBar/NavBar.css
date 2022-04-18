@@ -11,7 +11,6 @@
 
 .NavBarLeft{
     flex:3 ;
-
 }
 
 .logo{
@@ -22,11 +21,10 @@
     cursor: pointer;
 }
 
-
 .NavBarCenter{
     flex:5 ;
-    
 }
+
 .searchbar{
     width: 100%;
     height: 30px;
@@ -53,37 +51,47 @@
 }
 .NavBarRight{
     flex: 3;
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     color: rgb(0, 0, 0);  
     font-weight: bold; 
+    cursor: pointer;
 }
-.NavBarLink{
+
+.NavBarLink{  /*login*/
+    margin-right: 10px;
     font-size: 12px;
     cursor: pointer;
-    color: rgb(0, 4, 211);
+    color: rgb(0, 0, 0);
 }
-.NavBarLink1{
-    font-size: 18px;
+
+.NavBarLink1{ /*upload*/
+    margin-right: 10px;
+    font-size: 16px;
     cursor: pointer;
     color: rgba(255, 115, 0, 0.89);
 }
 
-.NavbarLink2{
+.NavBarLink3{ /*register*/
+    margin-right: 10px;
     font-size: 12px; 
     cursor: pointer;
-    color: rgb(0, 4, 211);
+    color: rgb(3, 3, 3);
 }
 
 .NavBarIcons{
     display: flex;
 }
+
 .NavBarIconItems{
 margin-right: 20px;
 cursor: pointer;
 position: relative;
+color: rgb(0, 0, 0);
 }
+
 .NavBarIconBadge{
     height: 20px;
     width: 20px;
@@ -97,15 +105,13 @@ position: relative;
     align-items: center;
     justify-content: center;
     font-size: 9px;
-
-
 }
+
 .NavBarImg{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
-
 }
 

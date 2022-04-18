@@ -10,7 +10,6 @@ export default function Profile() {
             <NavBar />
             <div className="profile">
                 <Leftsidebar />
-                
                 <div className="profileRight"></div>
                 <div className="profileRightTop">
                     <div className="profileCover">
