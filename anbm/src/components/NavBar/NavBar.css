@@ -1,7 +1,7 @@
 .NavBarContainer{
     height: 70px;
     width: 100%;
-    background-color: #332d28a6;
+    background-color: #332d289a;
     display:flex;
     align-items: center;
     position: sticky;
@@ -21,6 +21,7 @@
     color: rgb(0, 0, 0);
     cursor: pointer;
 }
+
 
 .NavBarCenter{
     flex:5 ;
@@ -68,12 +69,6 @@
     font-size: 18px;
     cursor: pointer;
     color: rgba(255, 115, 0, 0.89);
-}
-
-.NavBarLink2{
-    margin-right: 20px;
-    font-size: 16px;
-    cursor: pointer;
 }
 .NavBarIcons{
     display: flex;
