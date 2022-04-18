@@ -1,5 +1,6 @@
 import "./NavBar.css" ;
 import {Search, Person, Chat, Notifications } from "@material-ui/icons" ;
+
 export default function NavBar(){
     return (
       <div className="NavBarContainer"> 
