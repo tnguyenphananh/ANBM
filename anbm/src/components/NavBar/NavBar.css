@@ -68,6 +68,12 @@
     cursor: pointer;
     color: rgba(255, 115, 0, 0.89);
 }
+
+.NavBarLink2{
+    margin-right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
 .NavBarIcons{
     display: flex;
 }

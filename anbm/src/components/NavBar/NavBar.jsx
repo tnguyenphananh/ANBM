@@ -15,7 +15,8 @@ export default function NavBar(){
           <div className="NavBarRight">
             <div className="NavBarLinks">
             <span className="NavBarLink1">Upload</span>
-            <span className="NavBarLink">Timeline</span>
+            <span className="NavBarLink"> Login</span>
+            <span className="NavBarLink2"> Register</span>
             </div>
             <div className="NavBarIcons">
             <div className="NavBarIconItems">

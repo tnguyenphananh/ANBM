@@ -4,7 +4,7 @@ import Register from "./pages/home/register/Register";
 import Profile from "./pages/profile/profile";
 
 function App() {
-  return <Profile/>
+  return <Home/>
 }
 
 export default App;
