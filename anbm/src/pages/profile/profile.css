@@ -2,14 +2,20 @@
     display: flex;
 
 }
-.profileLeft{
-    flex:2;
+
+.leftsidebar{
+    margin-top: 20px;
+}
+
+.rightsidebar{
+    margin-top: 20px;
 }
 .profileRight{
-    flex: 8;
+    flex: 1;
 }
 
 .profileCover{
+    display: flex;
     height: 320px;
     position: relative;
 }

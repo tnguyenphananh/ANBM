@@ -18,8 +18,13 @@
 
 .leftsidebarListItem{
     display: flex;
+    background: white;
+    border-radius: 5px;
+    
+    outline: none;
     align-items: center;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .leftsidebarIcon{
