@@ -7,7 +7,7 @@ export default function Register(){
             <div className="loginLeft">
                 <h3 className="loginLogo">ANBM</h3>
                 <span className="loginDesc">
-                    Connect with friends and the world around you on ANBM.
+                Explore the most popular songs by users on ANBM.
                 </span>
             </div>
             <div className="loginRight">
@@ -16,6 +16,8 @@ export default function Register(){
                 <input placeholder="Email" className="loginInput" />
                 <input placeholder="Password" className="loginInput" />
                 <input placeholder="Password Again" className="loginInput" />
+                <input placeholder="DOB" className="loginInput" />
+                <input placeholder="Location" className="loginInput" />
                 <button className="loginButton"> Sign Up</button>
                 <button className="loginRegisterButton">
                     Log into Account
