@@ -52,26 +52,26 @@ export default function Post({post}) {
                     </div>
                     <div className="postRightBottom">
                         <div className="interactButton">
-                            <ThumbUp style={{fontSize: 50}} onClick={likeHandler}/>
+                            <ThumbUp style={{fontSize: 30}} onClick={likeHandler}/>
                             <span className="interactButtonText">Like</span>
                             <span className="postLikeCounter">{like}</span>
                         </div>
                         <div className="interactButton">
-                            <ThumbDown style={{fontSize: 50}} onClick={dislikeHandler}/>
+                            <ThumbDown style={{fontSize: 30}} onClick={dislikeHandler}/>
                             <span className="interactButtonText">Dislike</span>
                             <span className="postDislikeCounter">{dislike}</span>
                         </div>
                         <div className="interactButton">
-                            <Comment style={{fontSize: 50}}/>
+                            <Comment style={{fontSize: 30}}/>
                             <span className="interactButtonText">Comment</span>
                             <span className="postCommentCounter">{post.comment}</span>
                         </div>
                         <div className="interactButton">
-                            <Save style={{fontSize: 50}}/>
+                            <Save style={{fontSize: 30}}/>
                             <span className="interactButtonText">Save</span>
                         </div>
                         <div className="interactButton">
-                            <Share style={{fontSize: 50}}/>
+                            <Share style={{fontSize: 30}}/>
                             <span className="interactButtonText">Share</span>
                         </div>
                     </div>
