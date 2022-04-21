@@ -109,5 +109,5 @@ export default function Rightsidebar({profile}) {
 
             </div>
         </div>
-    );
+    ); 
 }
