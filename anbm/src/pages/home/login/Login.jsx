@@ -8,7 +8,7 @@ export default function Login(){
     const password = useRef();
     const handleClick = (e) => {
         e.preventDefault ();
-        console.log(email);
+        console.log(email.current.value);
     }
     return (
     <div className="login">
@@ -34,6 +34,7 @@ export default function Login(){
                 placeholder="Password" 
                 type="password" 
                 required
+                minLength = "6"
                 className="loginInput"
                 ref={password}
                 />
@@ -44,7 +45,7 @@ export default function Login(){
                 <Link to="/register">
                     <button className="loginRegisterButton">Create a New Account</button>
                 </Link>
-                </div>
+                </form>
             </div>
         </div>
     </div>
