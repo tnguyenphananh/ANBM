@@ -8,16 +8,17 @@ const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
 const multer = require("multer");
-
-dotenv.config();
+const path = require("path");
+dotenv.config(); 
 
 mongoose.connect(process.env.MONGO_URL,
     { useNewUrlParser: true }
     , () => {
-        console.log("Connected to MongoDB")
+        console.log("Connected to MongoDB");
     }
 );
 
+app.user("/images", express.static(path.join(__dirname,"public/images")));
 //middleware
 app.use(express.json());
 app.use(helmet());
