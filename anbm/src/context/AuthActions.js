@@ -3,7 +3,7 @@ export const LoginStart = (userCredentials) => ({
 });
 
 export const LoginSuccess = (user) => ({
-    type: "LOGIN_START",
+    type: "LOGIN_SUCCESS",
     payload: user,
 });
 

@@ -2,7 +2,7 @@ import "./login.css";
 import {Link} from "react-router-dom";
 import { useContext, useRef } from "react";
 import { loginCall } from "../../../apiCalls";
-import { AuthContext} from "../../context/AuthContext";
+import { AuthContext} from "../../../context/AuthContext";
 import {CircularProgress} from "@material-ui/core";
 
 
@@ -26,7 +26,7 @@ export default function Login(){
             <div className="loginLeft">
             <Link to ="/" style={{textDecoration: "none"}}>
                 <h3 className="loginLogo">BANd</h3>
-                </Link>
+                </Link> 
                 <span className="loginDesc">
                     Banding together through music.
                 </span>
@@ -37,7 +37,7 @@ export default function Login(){
                 placeholder="Email" 
                 type="email" 
                 required
-                className="loginInput" 
+                className="loginInput"  
                 ref={email}
                 />
                 <input 

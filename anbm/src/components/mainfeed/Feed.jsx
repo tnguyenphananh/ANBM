@@ -1,7 +1,7 @@
-import "./feed.css"
-import Post from "../post/Post"
-import Share from "../share/Share"
-import { useEffect, useState } from "react"
+import "./feed.css";
+import Post from "../post/Post";
+import Share from "../share/Share";
+import { useEffect, useState } from "react";
 import axios from "axios"
 
 export default function Feed({ username }) {
