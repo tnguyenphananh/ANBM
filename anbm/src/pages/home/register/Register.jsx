@@ -59,6 +59,6 @@ export default function Register(){
                 </form>
             </div>
         </div>
-    </div>
+        </div>
     );
 }

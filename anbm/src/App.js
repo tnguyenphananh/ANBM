@@ -16,7 +16,7 @@ function App() {
         <Route exact path="/profile" element={<Profile/>}/>
       </Routes>
     </Router>
-    );
+  );
 }
 
 export default App;
