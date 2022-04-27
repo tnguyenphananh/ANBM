@@ -23,12 +23,13 @@ app.use("/images", express.static(path.join(__dirname,"public/images")));
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
+
 const storage = multer.diskStorage({
     destination:(reg,file,cb)=>{
         cb(null,"/anbm-api/public/images");
     },
     filename: (req,file,cb)=>{
-        cb(null,file.originalname);
+        cb(null,req.body.name);
     },
    
 });
