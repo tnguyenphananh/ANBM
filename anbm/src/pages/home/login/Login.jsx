@@ -18,8 +18,10 @@ export default function Login(){
           dispatch
         );
       };
-
+    console.log(isFetching);
+    console.log(error);
     console.log(user);
+
     return (
     <div className="login">
         <div className="loginWrapper">
@@ -48,11 +50,9 @@ export default function Login(){
                 className="loginInput"
                 ref={password}
                 />
-                <Link to="/">
                     <button className="loginButton" type="submit" disabled={isFetching}>
                      {isFetching ? <CircularProgress color ="white"  size="20px" /> : "Log In"} 
                      </button>
-                </Link>
                 <span className="loginForgot"> Forgot Password?</span>
                 <Link to="/register">
                     <button className="loginRegisterButton">
@@ -61,7 +61,7 @@ export default function Login(){
                     ) : (
                         "Create a New Account"
                     )}  
-                        </button>
+                    </button>
                 </Link>
                 </form>
             </div>
