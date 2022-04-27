@@ -12,12 +12,12 @@ export default function Login(){
     const { user, isFetching, error, dispatch } = useContext(AuthContext);
 
     const handleClick = (e) => {
-        e.preventDefault ();
+        e.preventDefault();
         loginCall(
-            {email: email.current.value, password: password.current.value},
-             dispatch
+          { email: email.current.value, password: password.current.value },
+          dispatch
         );
-    };
+      };
 
     console.log(user);
     return (
