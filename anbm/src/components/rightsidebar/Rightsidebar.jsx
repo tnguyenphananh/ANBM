@@ -21,7 +21,7 @@ export default function Rightsidebar({ user }) {
 
     useEffect(()=>{
         setFollowed(currentUser.followings.includes(user?.id))
-    },[currentUser, user.id]);
+    },[currentUser, currentUser.id]);
 
     const handleClick = async ()=> {
         try{
@@ -109,7 +109,8 @@ export default function Rightsidebar({ user }) {
                 <h4 className="rightsidebarTitle">Top Songs</h4>
                 <div className="rightsidebarFollowings">
                     <div className="rightsidebarFollowing">
-                        <img src={`${PF}profile/photo1.jpg`} alt="" className="rightsidebarFollowingImg" />
+                        <img src={`${PF}profile/photo1.jpg`} 
+                        alt="" className="rightsidebarFollowingImg" />
                         <span className="rightsidebarFollowingName"> Tipitipitiu</span>
                     </div>
                     <div className="rightsidebarFollowing">
