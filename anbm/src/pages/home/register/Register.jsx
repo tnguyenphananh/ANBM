@@ -25,7 +25,7 @@ export default function Register(){
             };
             try{
                 await axios.post("/auth/register", user);
-                navigate.push("/login");
+                navigate("/login");
             } catch (err) {
                 console.log(err)
             }
@@ -49,14 +49,15 @@ export default function Register(){
                 <input placeholder="Email" required ref={email} className="loginInput" type="email" />
                 <input placeholder="Password" required ref={password} className="loginInput" type="password" minLength="6"/>
                 <input placeholder="Password Again" required ref={passwordAgain} className="loginInput" type="password" />
-                <input placeholder="DOB" required ref={DOB} className="loginInput" type="DOB" />
-                <input placeholder="Location" required ref={location} className="loginInput" type="location"/>
-                <Link to="/">
+                <input placeholder="DOB"  ref={DOB} className="loginInput" type="DOB" />
+                <input placeholder="Location"  ref={location} className="loginInput" type="location"/>
+                
                     <button className="loginButton" type="submit"> Sign Up</button>
-                </Link>
-                <Link to="/login">
+                
+                <Link to ="/login">
                     <button className="loginRegisterButton"> Log into Account </button>
                 </Link>
+                
                 </form>
             </div>
         </div>
