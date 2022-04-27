@@ -1,5 +1,5 @@
 import "./rightsidebar.css"
-import { FeaturedPlayList } from "@material-ui/icons";
+import { FeaturedPlayList, Remove } from "@material-ui/icons";
 import { Face } from "@material-ui/icons";
 import { MusicNote } from "@material-ui/icons";
 import { TrendingUp } from "@material-ui/icons";
@@ -7,10 +7,33 @@ import { Whatshot } from "@material-ui/icons";
 import { Users } from "../../dummyData";
 import Suggest from "../suggest/Suggest";
 import Profile from "../../pages/profile/profile";
+import { useContext, useEffect } from "react";
+import {Add} from "@material-ui/icons";
 
 export default function Rightsidebar({ user }) {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    const [friends, setFriends] = useState([]);
+    const {user:currentUser, dispatch} = useContext(AuthContext) ; 
+    const [followed,setFollowed] = useState(currentUser.followings.includes(user?.id))
 
+    useEffect(()=>{
+        setFollowed(currentUser.followings.includes(user?.id))
+    },[currentUser, user.id]);
+
+    const handleClick = async ()=> {
+        try{
+            if(followed){
+                await axios.put("/users/" + user._id+"/unfollow", {userId:currentUser._id});
+                dispatch({type:"UNFOLLOW",payload:user._id})
+            }else{
+                await axios.put("/users/" + user._id+"/follow", {userId:currentUser._id});
+                dispatch({type:"FOLLOW",payload:user._id});
+            }
+        }catch(err){
+            console.log(err)
+        }
+        setFollowed(!followed)
+    }
     const HomeRightbar = () => {
         return (
             <>
@@ -50,6 +73,13 @@ export default function Rightsidebar({ user }) {
     const ProfileRightbar = () => {
         return (
             <>
+            {user.username != currentUser.username && (
+                <button className="rightbarFollowButton" onClick={handleClick}>
+                    {followed ? "Unfollow" : "Follow"}
+                    {followed ? <Remove/> : <Add/>}                 
+                    
+                </button>
+            )}
                 <h4 className="rightsidebarTitle">Bio</h4>
                 <div className="rightsidebarInfo">
                     <div className="rightsidebarInfoItem">
