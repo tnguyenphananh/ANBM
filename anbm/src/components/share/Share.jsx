@@ -1,6 +1,6 @@
 import "./share.css"
 import{PermMedia,Label,Room,EmojiEmotions, Cancel} from "@material-ui/icons"
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import {AuthContext} from "../../context/AuthContext";
 import axios from "axios";
 
@@ -18,7 +18,7 @@ export default function () {
   }
 if(file){
   const data = new FormData();
-  const fileName = Date.now() = file.name;
+  const fileName = Date.now() + file.name;
   data.append("file",file)
   data.append("name",fileName);
   newPost.img = fileName;

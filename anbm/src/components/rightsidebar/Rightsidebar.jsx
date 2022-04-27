@@ -9,6 +9,9 @@ import Suggest from "../suggest/Suggest";
 import Profile from "../../pages/profile/profile";
 import { useContext, useEffect } from "react";
 import {Add} from "@material-ui/icons";
+import { useState } from "react";
+import { axios } from "axios";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Rightsidebar({ user }) {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
