@@ -12,6 +12,7 @@ import {Add} from "@material-ui/icons";
 import { useState } from "react";
 import { axios } from "axios";
 import { AuthContext } from "../../context/AuthContext";
+import { Link } from "react-router-dom";
 
 export default function Rightsidebar({ user }) {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -21,7 +22,20 @@ export default function Rightsidebar({ user }) {
 
     useEffect(()=>{
         setFollowed(currentUser.followings.includes(user?.id))
+        
     },[currentUser, currentUser.id]);
+    useEffect(()=>{
+        const getFriends = async () => {
+            try{
+                const friendList = await axios.get("/users/friends/" +user._id);
+                setFriends(friendList.data);
+            }catch(err){
+                console.log(err);
+            }
+        }; 
+        getFriends();
+     }, [user._id]);
+      
 
     const handleClick = async ()=> {
         try{
@@ -36,7 +50,7 @@ export default function Rightsidebar({ user }) {
             console.log(err)
         }
         setFollowed(!followed)
-    }
+    };
     const HomeRightbar = () => {
         return (
             <>
@@ -108,31 +122,17 @@ export default function Rightsidebar({ user }) {
                 </div>
                 <h4 className="rightsidebarTitle">Top Songs</h4>
                 <div className="rightsidebarFollowings">
+                    {friends.map(friend=>(
+                        <Link to={"/profile/"+friend.username} style={{textDecoration:"none"}}>
                     <div className="rightsidebarFollowing">
-                        <img src={`${PF}profile/photo1.jpg`} 
+                        <img src={friend.profilePicture ? PF+friend.profilePicture
+                        :PF+"person/noAvatar.png"} 
                         alt="" className="rightsidebarFollowingImg" />
-                        <span className="rightsidebarFollowingName"> Tipitipitiu</span>
+                        <span className="rightsidebarFollowingName"> {friend.username}</span>
                     </div>
-                    <div className="rightsidebarFollowing">
-                        <img src={`${PF}profile/photo2.jpg`} alt="" className="rightsidebarFollowingImg" />
-                        <span className="rightsidebarFollowingName">John Cena</span>
-                    </div>
-                    <div className="rightsidebarFollowing">
-                        <img src={`${PF}profile/photo3.jpg`} alt="" className="rightsidebarFollowingImg" />
-                        <span className="rightsidebarFollowingName">John Cena</span>
-                    </div>
-                    <div className="rightsidebarFollowing">
-                        <img src={`${PF}profile/photo1.jpg`} alt="" className="rightsidebarFollowingImg" />
-                        <span className="rightsidebarFollowingName">John Cena</span>
-                    </div>
-                    <div className="rightsidebarFollowing">
-                        <img src={`${PF}profile/photo2.jpg`} alt="" className="rightsidebarFollowingImg" />
-                        <span className="rightsidebarFollowingName">John Cena</span>
-                    </div>
-                    <div className="rightsidebarFollowing">
-                        <img src={`${PF}profile/photo3.jpg`} alt="" className="rightsidebarFollowingImg" />
-                        <span className="rightsidebarFollowingName">John Cena</span>
-                    </div>
+                    </Link>
+                    ))} 
+                    
                 </div>
             </>
 
