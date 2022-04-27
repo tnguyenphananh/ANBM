@@ -1,11 +1,14 @@
 import"./post.css"
 import{MoreVert,ThumbDown,ThumbUp,Comment,Save,Share} from "@material-ui/icons"
-import { Users } from "../../dummyData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios"
+import {format} from "timeago.js"
+import {Link} from "react-router-dom";
 
 export default function Post({post}) {
-    const [like,setLike] = useState(post.like)
+    const [like,setLike] = useState(post.likes.length)
     const [isLiked,setIsLiked] = useState(false)
+    const [user,setUser] = useState({})
     const likeHandler=()=>{
         setLike(isLiked? like-1:like+1)
         setIsLiked(!isLiked)
@@ -16,21 +19,33 @@ export default function Post({post}) {
         setDislike(isDisliked? dislike-1:dislike+1)
         setIsDisliked(!isDisliked)
     }
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
+    useEffect(() => {
+        const fetchUser = async () => {
+            const res = await axios.get(`/users?userId=${post.userId}`)
+            setUser(res.data)
+        };
+        fetchUser();
+    }, [post.userId]);
+
     return (
       <div className="post">
           <div className="postWrapper">
                 <div className="postLeft">
                     <div className="postLeftTop">
                         <div className="postLeftTopLeft">
-                            <img 
-                                className="postProfileImg" 
-                                src={Users.filter(u=>u.id===post.userId)[0].profilePicture} 
-                                alt="" 
-                            />
+                            <Link to={`profile/${user.username}`}>
+                                <img 
+                                    className="postProfileImg" 
+                                    src={user.profilePicture||PF+"profile/noAvatar.png"} 
+                                    alt="" 
+                                />
+                            </Link>
                             <span className="postUsername">
-                                {Users.filter(u=>u.id===post.userId)[0].username}
+                                {user.username}
                             </span>
-                            <span className="postDate"> {post.date}</span>
+                            <span className="postDate"> {format(post.createdAt)}</span>
                         </div>
                         <div className="postLeftTopRight">
                             <MoreVert/>
@@ -48,7 +63,7 @@ export default function Post({post}) {
                 </div>
                 <div className="postRight">
                     <div className="postRightTop">
-                        <img className="albumImg" src={post.photo} alt="" />
+                        <img className="albumImg" src={PF+post.img} alt="" />
                     </div>
                     <div className="postRightBottom">
                         <div className="interactButton">
@@ -80,70 +95,3 @@ export default function Post({post}) {
       </div>
     )
   }
-/*
-export default function Post() {
-  return (
-    <div className="post">
-        <div className="postWrapper">
-            <div className="postTop">
-                <div className="postTopLeft">
-                    <img className="postProfileImg" src="/assets/profile/template_3.jpg" alt="" />
-                    <span className="postUsername"> Safak Kocaolu </span>
-                    <span className="postDate"> 5mins ago</span>
-                </div>
-                <div className="postTopRight">
-                    <MoreVert></MoreVert>
-                </div>
-            </div>
-
-            <div className="postCenter">
-                <span className="postText">Hey! It's my first post</span>
-                <div className="postCenterBottom">
-                    <hr className="postCenterBottomHr" />
-                    <div className="play">
-                        <button className="playButton"> <img className="playImg" src="/assets/like.jpg"/></button>
-                    </div>
-                    <span className="songLink">https://thelink.com</span>
-                    <div className="albumCover">
-                        <img className="albumImg" src="/assets/post/Women20Holding20iPhone20620Mockup2028129.jpg" alt="" />
-                        <div className="albumBottom">
-                            <div className="interactButton">
-                                <ThumbUp style={{fontSize: 50}}/>
-                                <span className="interactButtonText">Like</span>
-                            </div>
-                            <div className="interactButton">
-                                <ThumbDown style={{fontSize: 50}}/>
-                                <span className="interactButtonText">Dislike</span>
-                            </div>
-                            <div className="interactButton">
-                                <Comment style={{fontSize: 50}}/>
-                                <span className="interactButtonText">Comment</span>
-                            </div>
-                            <div className="interactButton">
-                                <Save style={{fontSize: 50}}/>
-                                <span className="interactButtonText">Save</span>
-                            </div>
-                            <div className="interactButton">
-                                <Share style={{fontSize: 50}}/>
-                                <span className="interactButtonText">Share</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="postBottom">
-                <div className="postBottomLeft">
-                    <img className="likeIcon" src="/assets/like.jpg" alt="" />
-                    <img className="likeIcon" src="/assets/dislike.jpg" alt="" />
-                    <span className="postLikeCounter">32 people liked it</span>
-                </div>
-                <div className="postBottomRight">
-                    <span className="postCommentText">9 comments</span>
-                </div>
-            </div>
-        </div>
-    </div>
-  )
-}
-*/

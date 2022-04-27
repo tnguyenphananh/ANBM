@@ -76,6 +76,6 @@ window.location.reload()
             <button className="shareButton" type="submit">Share</button>
           </form>
         </div>
-    </div>
+      </div>
   )
 }
