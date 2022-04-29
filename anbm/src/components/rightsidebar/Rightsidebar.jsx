@@ -54,23 +54,23 @@ export default function Rightsidebar({ user }) {
                 <div className="rightsidebarInfo">
                     <div className="rightsidebarInfoItem">
                         <span className="rightsidebarInfoKey">Pronouns:</span>
-                        <span className="rightsidebarInfoValue"> {user.pronoun === "" ? "N/A" : user.pronoun}</span>
+                        <span className="rightsidebarInfoValue"> {user.pronoun ? user.pronoun : "N/A"}</span>
                     </div>
                     <div className="rightsidebarInfoItem">
                         <span className="rightsidebarInfoKey">Location:</span>
-                        <span className="rightsidebarInfoValue"> {user.location === "" ? "N/A" : user.location} </span>
+                        <span className="rightsidebarInfoValue"> {user.location ? user.location : "N/A"} </span>
                     </div>
                     <div className="rightsidebarInfoItem">
                         <span className="rightsidebarInfoKey">Age:</span>
-                        <span className="rightsidebarInfoValue"> {user.age === "" ? "N/A" : user.age}</span>
+                        <span className="rightsidebarInfoValue"> {user.age ? user.age : "N/A"}</span>
                     </div>
                     <div className="rightsidebarInfoItem">
                         <span className="rightsidebarInfoKey">Genre:</span>
-                        <span className="rightsidebarInfoValue"> {user.genre === "" ? "N/A" : user.genre}</span>
+                        <span className="rightsidebarInfoValue"> {user.genre ? user.genre : "N/A"}</span>
                     </div>
                     <div className="rightsidebarInfoItem">
                         <span className="rightsidebarInfoKey">Instruments:</span>
-                        <span className="rightsidebarInfoValue"> {user.instrument === "" ? "N/A" : user.instrument}</span>
+                        <span className="rightsidebarInfoValue"> {user.instrument ? user.instrument : "N/A"}</span>
                     </div>
                 </div>
                 <h4 className="rightsidebarTitle">Top Songs</h4>
