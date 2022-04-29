@@ -35,7 +35,8 @@ export default function Post({ post }) {
 
     useEffect(() => {
         setIsLiked(post.likes.includes(currentUser._id))
-    }, [currentUser._id, post.likes])
+        setIsDisliked(post.dislikes.includes(currentUser._id))
+    }, [currentUser._id, post.likes,post.dislikes])
 
     useEffect(() => {
         const fetchUser = async () => {
