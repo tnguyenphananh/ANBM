@@ -23,7 +23,7 @@ export default function Rightsidebar({ user }) {
     useEffect(()=>{
         setFollowed(currentUser.followings.includes(user?.id))
         
-    },[currentUser, user.id]);
+    },[currentUser, user?.id]);
 
     useEffect(()=>{
         const getFriends = async () => {
@@ -35,7 +35,7 @@ export default function Rightsidebar({ user }) {
             }
         }; 
         getFriends();
-     }, [user._id]);
+     }, [user?._id]);
       
 
     const handleClick = async ()=> {
@@ -127,7 +127,7 @@ export default function Rightsidebar({ user }) {
                         <Link to={"/profile/"+friend.username} style={{textDecoration:"none"}}>
                     <div className="rightsidebarFollowing">
                         <img src={friend.profilePicture ? PF+friend.profilePicture
-                        :PF+"person/noAvatar.png"} 
+                        :PF+"profile/noAvatar.png"} 
                         alt="" className="rightsidebarFollowingImg" />
                         <span className="rightsidebarFollowingName"> {friend.username}</span>
                     </div>

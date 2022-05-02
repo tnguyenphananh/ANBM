@@ -42,7 +42,7 @@ window.location.reload()
     <div className="share">
         <div className="shareWrapper">
           <div className="shareTop">
-            <img className="shareProfileImg" src={user.profilePicture ? PF+user.profilePicture : PF+"person/noAvatar.png"} alt=""/>
+            <img className="shareProfileImg" src={user.profilePicture ? PF+user.profilePicture : PF+"profile/noAvatar.png"} alt=""/>
             <input 
               placeholder={"what's in your mind"+ user.username+ "?"}
               className="shareInput"
