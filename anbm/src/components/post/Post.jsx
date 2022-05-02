@@ -73,7 +73,7 @@ export default function Post({ post }) {
                     </div>
                     <div className="postLeftBottom">
                         <div className="play">
-                            <button className="playButton"> <img className="playImg" src="/assets/like.jpg" /></button>
+                            <button className="playButton"> <img className="playImg" src="/assets/like.jpg" alt="" /></button>
                         </div>
                         <span className="songLink">https://thelink.com</span>
                     </div>

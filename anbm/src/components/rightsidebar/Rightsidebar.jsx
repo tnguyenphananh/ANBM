@@ -6,7 +6,6 @@ import { TrendingUp } from "@material-ui/icons";
 import { Whatshot } from "@material-ui/icons";
 import { Users } from "../../dummyData";
 import Suggest from "../suggest/Suggest";
-import Profile from "../../pages/profile/profile";
 
 export default function Rightsidebar({ user }) {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;

@@ -1,7 +1,7 @@
 import "./share.css"
 import { PermMedia, Label, Room, EmojiEmotions } from "@material-ui/icons"
 
-export default function () {
+export default function Share() {
   return (
     <div className="share">
       <div className="shareWrapper">
