@@ -40,8 +40,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:8800/api/",
-  "devDependencies": {
-    "resolve-url-loader": "^5.0.0"
+  "proxy": "http://localhost:8800/api",
+  "devDependencies" :{
+    "resolve-url-loader" : "^5.0.0"
   }
 }
