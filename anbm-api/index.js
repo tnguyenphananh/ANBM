@@ -19,6 +19,7 @@ mongoose.connect(process.env.MONGO_URL,
 );
 
 app.use("/images", express.static(path.join(__dirname,"public/images")));
+
 //middleware
 app.use(express.json());
 app.use(helmet());
@@ -29,7 +30,7 @@ const storage = multer.diskStorage({
         cb(null,"/anbm-api/public/images");
     },
     filename: (req,file,cb)=>{
-        cb(null,req.body.name);
+        cb(null, req.body.name);
     },
    
 });
