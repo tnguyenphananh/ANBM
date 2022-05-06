@@ -4,8 +4,8 @@ import Rightsidebar from "../../components/rightsidebar/Rightsidebar";
 import Feed from '../../components/mainfeed/Feed';
 import NavBar from '../../components/NavBar/NavBar';
 import { useEffect, useState } from "react";
-import axios from "axios"
 import { useParams } from "react-router"
+import { axiosInstance } from "../../config";
 
 export default function Profile() {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -13,7 +13,7 @@ export default function Profile() {
     const username = useParams().username;
     useEffect(() => {
         const fetchUser = async () => {
-            const res = await axios.get(`/users?username=${username}`)
+            const res = await axiosInstance.get(`/users?username=${username}`)
             setUser(res.data)
         };
         fetchUser();
