@@ -1,10 +1,10 @@
 import "./post.css"
 import { MoreVert, ThumbDown, ThumbUp, Comment, Save, Share } from "@material-ui/icons"
 import { useState, useEffect, useContext } from "react";
-import axios from "axios"
 import { format } from "timeago.js"
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import { axiosInstance } from "../../config";
 
 export default function Post({ post }) {
     const [like, setLike] = useState(post.likes.length)
@@ -13,7 +13,7 @@ export default function Post({ post }) {
     const { user: currentUser } = useContext(AuthContext)
     const likeHandler = () => {
         try {
-            axios.put("/posts/" + post._id + "/like", { userId: currentUser._id })
+            axiosInstance.put("/posts/" + post._id + "/like", { userId: currentUser._id })
         } catch (err) {
 
         }
@@ -24,7 +24,7 @@ export default function Post({ post }) {
     const [isDisliked, setIsDisliked] = useState(false)
     const dislikeHandler = () => {
         try {
-            axios.put("/posts/" + post._id + "/dislike", { userId: currentUser._id })
+            axiosInstance.put("/posts/" + post._id + "/dislike", { userId: currentUser._id })
         } catch (err) {
 
         }
@@ -40,7 +40,7 @@ export default function Post({ post }) {
 
     useEffect(() => {
         const fetchUser = async () => {
-            const res = await axios.get(`/users?userId=${post.userId}`)
+            const res = await axiosInstance.get(`/users?userId=${post.userId}`)
             setUser(res.data)
         };
         fetchUser();
@@ -52,7 +52,7 @@ export default function Post({ post }) {
                 <div className="postLeft">
                     <div className="postLeftTop">
                         <div className="postLeftTopLeft">
-                            <Link to={`profile/${user.username}`}>
+                            <Link to={`/profile/${user.username}`}>
                                 <img
                                     className="postProfileImg"
                                     src={user.profilePicture ? PF + user.profilePicture : PF + "profile/noAvatar.png"}
@@ -73,7 +73,7 @@ export default function Post({ post }) {
                     </div>
                     <div className="postLeftBottom">
                         <div className="play">
-                            <button className="playButton"> <img className="playImg" src="/assets/like.jpg" /></button>
+                            <button className="playButton"> <img className="playImg" src="/assets/like.jpg" alt="" /></button>
                         </div>
                         <span className="songLink">https://thelink.com</span>
                     </div>

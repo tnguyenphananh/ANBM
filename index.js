@@ -19,6 +19,7 @@ mongoose.connect(process.env.MONGO_URL,
 );
 
 app.use("/images", express.static(path.join(__dirname,"public/images")));
+
 //middleware
 app.use(express.json());
 app.use(helmet());
@@ -29,7 +30,7 @@ const storage = multer.diskStorage({
         cb(null,"/anbm-api/public/images");
     },
     filename: (req,file,cb)=>{
-        cb(null,req.body.name);
+        cb(null, req.body.name);
     },
    
 });
@@ -47,6 +48,12 @@ app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 
-app.listen(8800, () => {
+app.use(express.static(path.join(__dirname,"/anbm/build")));
+
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,'/anbm/build','index.html'));
+});
+
+app.listen(process.env.PORT || 8800, () => {
     console.log("Backend sever is running!")
 }) 
