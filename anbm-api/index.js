@@ -48,12 +48,6 @@ app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 
-app.use(express.static(path.join(__dirname,"/anbm/build")));
-
-app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,'/anbm/build','index.html'));
-});
-
-app.listen(process.env.PORT || 8800, () => {
+app.listen(8800, () => {
     console.log("Backend sever is running!")
 }) 
