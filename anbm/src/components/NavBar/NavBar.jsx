@@ -1,8 +1,14 @@
 import "./NavBar.css";
-import { Search, Person, Chat, Notifications, PlayCircleFilledWhiteTwoTone } from "@material-ui/icons";
+import { Search, Person, Chat, Notifications } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
 
 export default function NavBar() {
+
+    const { user } = useContext(AuthContext);
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+    console.log(user.username);
     return (
         <div className="NavBarContainer">
             <div className="NavBarLeft">
@@ -40,8 +46,15 @@ export default function NavBar() {
                         <span className="NavBarIconBadge">1.0k</span>
                     </div>
                 </div>
-                <Link to='/profile' style={{ textDecoration: "none" }}>
-                    <img src="/assets/profile/photo1.jpg" alt="" className="NavBarImg" />
+                <Link to={`/profile/${user.username}`}>
+                    <img
+                        src={user.profilePicture 
+                            ? PF + user.profilePicture
+                            : PF + "profile/noAvatar.png"
+                        }
+                        alt=""
+                        className="NavBarImg"
+                    />
                 </Link>
             </div>
         </div>

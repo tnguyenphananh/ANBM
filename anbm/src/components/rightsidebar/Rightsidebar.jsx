@@ -1,5 +1,5 @@
 import "./rightsidebar.css"
-import { FeaturedPlayList, Remove } from "@material-ui/icons";
+import { FeaturedPlayList } from "@material-ui/icons";
 import { Face } from "@material-ui/icons";
 import { MusicNote } from "@material-ui/icons";
 import { TrendingUp } from "@material-ui/icons";
@@ -16,9 +16,6 @@ import { Link } from "react-router-dom";
 
 export default function Rightsidebar({ user }) {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
-    const [friends, setFriends] = useState([]);
-    const {user:currentUser, dispatch} = useContext(AuthContext) ; 
-    const [followed,setFollowed] = useState(currentUser.followings.includes(user?.id))
 
     useEffect(()=>{
         setFollowed(currentUser.followings.includes(user?.id))
@@ -91,34 +88,27 @@ export default function Rightsidebar({ user }) {
     const ProfileRightbar = () => {
         return (
             <>
-            {user.username != currentUser.username && (
-                <button className="rightbarFollowButton" onClick={handleClick}>
-                    {followed ? "Unfollow" : "Follow"}
-                    {followed ? <Remove/> : <Add/>}                 
-                    
-                </button>
-            )}
                 <h4 className="rightsidebarTitle">Bio</h4>
                 <div className="rightsidebarInfo">
                     <div className="rightsidebarInfoItem">
                         <span className="rightsidebarInfoKey">Pronouns:</span>
-                        <span className="rightsidebarInfoValue"> {user.pronoun === "" ? "N/A" : user.pronoun}</span>
+                        <span className="rightsidebarInfoValue"> {user.pronoun ? user.pronoun : "N/A"}</span>
                     </div>
                     <div className="rightsidebarInfoItem">
                         <span className="rightsidebarInfoKey">Location:</span>
-                        <span className="rightsidebarInfoValue"> {user.location === "" ? "N/A" : user.location} </span>
+                        <span className="rightsidebarInfoValue"> {user.location ? user.location : "N/A"} </span>
                     </div>
                     <div className="rightsidebarInfoItem">
                         <span className="rightsidebarInfoKey">Age:</span>
-                        <span className="rightsidebarInfoValue"> {user.age === "" ? "N/A" : user.age}</span>
+                        <span className="rightsidebarInfoValue"> {user.age ? user.age : "N/A"}</span>
                     </div>
                     <div className="rightsidebarInfoItem">
                         <span className="rightsidebarInfoKey">Genre:</span>
-                        <span className="rightsidebarInfoValue"> {user.genre === "" ? "N/A" : user.genre}</span>
+                        <span className="rightsidebarInfoValue"> {user.genre ? user.genre : "N/A"}</span>
                     </div>
                     <div className="rightsidebarInfoItem">
                         <span className="rightsidebarInfoKey">Instruments:</span>
-                        <span className="rightsidebarInfoValue"> {user.instrument === "" ? "N/A" : user.instrument}</span>
+                        <span className="rightsidebarInfoValue"> {user.instrument ? user.instrument : "N/A"}</span>
                     </div>
                 </div>
                 <h4 className="rightsidebarTitle">Top Songs</h4>
