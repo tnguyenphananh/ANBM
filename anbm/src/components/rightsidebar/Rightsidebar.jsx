@@ -10,6 +10,38 @@ import Suggest from "../suggest/Suggest";
 export default function Rightsidebar({ user }) {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
+    useEffect(()=>{
+        setFollowed(currentUser.followings.includes(user?.id))
+        
+    },[currentUser, user?.id]);
+
+    useEffect(()=>{
+        const getFriends = async () => {
+            try{
+                const friendList = await axios.get("/users/friends/" +user._id);
+                setFriends(friendList.data);
+            }catch(err){
+                console.log(err);
+            }
+        }; 
+        getFriends();
+     }, [user?._id]);
+      
+
+    const handleClick = async ()=> {
+        try{
+            if(followed){
+                await axios.put("/users/" + user._id+"/unfollow", {userId:currentUser._id});
+                dispatch({type:"UNFOLLOW",payload:user._id})
+            }else{
+                await axios.put("/users/" + user._id+"/follow", {userId:currentUser._id});
+                dispatch({type:"FOLLOW",payload:user._id});
+            }
+        }catch(err){
+            console.log(err)
+        }
+        setFollowed(!followed)
+    };
     const HomeRightbar = () => {
         return (
             <>
