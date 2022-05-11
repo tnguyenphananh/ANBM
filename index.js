@@ -26,7 +26,7 @@ app.use(morgan("common"));
 
 const storage = multer.diskStorage({
     destination:(reg,file,cb)=>{
-        cb(null,"/anbm-api/public/images");
+        cb(null,"public/images");
     },
     filename: (req,file,cb)=>{
         cb(null,req.body.name);
