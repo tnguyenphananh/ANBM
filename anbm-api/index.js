@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGO_URL,
     , () => {
         console.log("Connected to MongoDB @ "+ process.env.MONGO_URL);
     }
-);
+)
 
 app.use("/images", express.static(path.join(__dirname,"public/images")));
 
