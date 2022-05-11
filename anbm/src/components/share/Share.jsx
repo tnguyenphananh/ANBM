@@ -45,7 +45,6 @@ export default function Share() {
           <input
             placeholder={"what's in your mind" + user.username + "?"}
             className="shareInput"
-            ref={desc}
           />
         </div>
         <hr className="shareHr" />
@@ -57,7 +56,7 @@ export default function Share() {
         )}
         <form className="shareBottom" onSubmit={submitHandler}>
           <div className="shareOptions">
-            <label htmlFor="file" className="shareOption">
+            <div className="shareOption">
               <PermMedia htmlColor="tomato" className="shareIcon" />
               <span className="shareOptionText">Photo or Video</span>
               <input
