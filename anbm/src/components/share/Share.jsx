@@ -8,7 +8,11 @@ export default function Share() {
   const { user } = useContext(AuthContext);
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const desc = useRef();
+<<<<<<< HEAD
   const [file, setFile] = useState(null);
+=======
+  const [file,setFile] = useState(null)
+>>>>>>> An
 
   const submitHandler = async (e) => {
     e.preventDefault()
